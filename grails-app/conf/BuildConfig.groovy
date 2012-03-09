@@ -20,8 +20,8 @@ grails.project.dependency.resolution = {
         grailsPlugins()
         grailsHome()
         grailsCentral()
-        mavenCentral()
 		mavenLocal()
+        mavenCentral()
 
         // uncomment these to enable remote dependency resolution from public Maven repositories
         //mavenCentral()
@@ -42,6 +42,9 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.7.1"
         runtime ":resources:1.1.6"
+		
+		compile(':heroku:1.0.1')
+		compile(':cloud-support:1.0.8')
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
@@ -50,9 +53,6 @@ grails.project.dependency.resolution = {
 
         build ":tomcat:$grailsVersion"
 		
-		compile ':heroku:1.0.1' {
-			exclude 'database-session'
-		}
-		compile ':cloud-support:1.0.8'
+		
     }
 }
