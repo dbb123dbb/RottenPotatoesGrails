@@ -50,7 +50,9 @@ grails.project.dependency.resolution = {
 
         build ":tomcat:$grailsVersion"
 		
-		compile ':heroku:1.0.1'
+		compile ':heroku:1.0.1' {
+			exclude 'database-session'
+		}
 		compile ':cloud-support:1.0.8'
     }
 }
